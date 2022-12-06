@@ -1,0 +1,50 @@
+package desafios;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class MovePares {
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+	    int i;
+	    int N = input.nextInt();
+	    int [] nums = new int[N];
+	    	  
+	    for (i = 0; i < N; i++) {	  
+	    	nums[i] = input.nextInt();
+	    }   
+	    
+	    List teste = Arrays.asList(nums);
+	    Collections.max(teste);
+	    
+//		System.out.println(Arrays.toString(nums));
+		
+		for (int j = 0; j < nums.length; j++) {
+			if (nums[j] % 2 == 0) MoveParaInicio(nums, j);
+			System.out.println(nums[j]);
+		}
+		
+		int k = 0;
+		while(k < nums.length) {
+			System.out.println(nums[k]);
+			k++;
+		}
+
+//		System.out.println("Array após mudanças: "+Arrays.toString(nums));
+	}
+	
+	public static void  MoveParaInicio(int array[], int pos){
+        int novaPos = array[pos];
+        int [] a = array;
+
+        for (int i = pos; i > 0; i--) {
+            a[i] = a[i-1];
+        }
+
+        a[0] = novaPos;
+	}
+}

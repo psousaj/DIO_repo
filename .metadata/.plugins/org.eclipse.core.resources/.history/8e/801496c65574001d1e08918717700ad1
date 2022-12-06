@@ -1,0 +1,22 @@
+package desafios;
+
+import java.util.Scanner;
+
+public class Validacao {
+	public static void main(String[] args) {
+	    Scanner scanner= new Scanner(System.in);
+	    
+	    boolean caracter = ehValido(scanner.nextLine());
+
+        System.out.println(caracter);
+	}
+
+	public static boolean ehValido(String s) {
+		boolean saida = false;
+		for (int i = s.length() - 1; 1 <= i; i--) {
+			String [] compare = {String.valueOf(i), String.valueOf(i)+1};
+			saida = compare[i].equals(compare[i+1]);
+		}
+		return saida;
+	}
+}

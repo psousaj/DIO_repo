@@ -1,0 +1,17 @@
+package desafios;
+
+import java.util.Scanner;
+
+public class Validacao {
+	public static void main(String[] args) {
+	    Scanner scanner= new Scanner(System.in);
+
+	    boolean caracter = ehValido(scanner.nextLine());
+
+        System.out.println(caracter);
+	}
+
+	public static boolean ehValido(String s) {
+		return;
+	}
+}

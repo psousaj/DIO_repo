@@ -1,0 +1,28 @@
+package desafios;
+
+import java.util.Scanner;
+
+public class Validacao {
+	public static void main(String[] args) {
+	    Scanner scanner= new Scanner(System.in);
+	    
+	    boolean caracter = ehValido(scanner.nextLine());
+
+        System.out.println(caracter);
+	}
+
+	public static boolean ehValido(String s) {
+		boolean saida = false;
+		String compare = s.substring(0, 1);
+		
+		if (compare.equals("(")) {
+			saida = (compare.concat(s.substring(1)).equals("()")) ? true : false; 
+		} else if(compare.equals("[")) {
+			saida = (compare.concat(s.substring(1)).equals("[]")) ? true : false;
+		} else if(compare.equals("{")) {
+			saida = (compare.concat(s.substring(1)).equals("{}")) ? true : false;
+		} 
+		System.out.println(s.substring(1)).equals("()"));
+		return saida;
+	}
+}

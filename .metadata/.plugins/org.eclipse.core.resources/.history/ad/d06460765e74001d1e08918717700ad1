@@ -1,0 +1,19 @@
+package desafios;
+
+public class MovePares {
+	public static void main(String[] args) {
+		
+	}
+	
+	public int[]  MoveParaInicio(int array[], int pos){
+        int novaPos = array[pos];
+        int [] a = array;
+
+        for (int i = pos; i > 0; i--) {
+            a[i] = a[i-1];
+        }
+
+        a[0] = novaPos;
+        return a;
+	}
+}
